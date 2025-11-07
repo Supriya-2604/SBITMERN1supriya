@@ -53,7 +53,7 @@ const Faculty = () => {
     try {
       setLoading(true);
       const newFaculty = { name, designation, qualification, salary };
-      await axios.post("https://sbitmern1supriya-server.onrender.com, newFaculty);
+      await axios.post("https://sbitmern1supriya-server.onrender.com", newFaculty);
       setName("");
       setDesignation("");
       setQualification("");
