@@ -35,7 +35,7 @@ const Faculty = () => {
 
   const fetchFaculty = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/faculty");
+      const res = await axios.get("https://sbitmern1supriya-server.onrender.com/api/faculty");
       setFaculty(res.data);
     } catch (err) {
       console.error("Error fetching faculty:", err);
@@ -53,7 +53,7 @@ const Faculty = () => {
     try {
       setLoading(true);
       const newFaculty = { name, designation, qualification, salary };
-      await axios.post("http://localhost:5000/api/faculty", newFaculty);
+      await axios.post("https://sbitmern1supriya-server.onrender.com, newFaculty);
       setName("");
       setDesignation("");
       setQualification("");
@@ -71,7 +71,7 @@ const Faculty = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this faculty?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/faculty/${id}`);
+      await axios.delete(`https://sbitmern1supriya-server.onrender.com/${id}`);
       await fetchFaculty();
     } catch (err) {
       console.error("Error deleting faculty:", err);
@@ -87,7 +87,7 @@ const Faculty = () => {
   const handleEditSave = async () => {
     try {
       await axios.put(
-        `http://localhost:5000/api/faculty/${selectedFaculty._id}`,
+        `https://sbitmern1supriya-server.onrender.com/api/faculty/${selectedFaculty._id}`,
         selectedFaculty
       );
       setEditDialogOpen(false);
